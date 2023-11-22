@@ -25,7 +25,7 @@ Performance highly depends on the surface of the ground. Rough terrains, high re
 - High level driver: which publishes data on topic odom by subscribing to individual sensor topics and performing the mathematical operations.
 
 <p align="center">
-	<img src="media/node_struct.png" width="477" height="283"/>
+	<img src="media/node_struct.png" width="596" height="353"/>
 </p>
 
 **Parameters:**<br>
@@ -33,13 +33,13 @@ Performance highly depends on the surface of the ground. Rough terrains, high re
 - Position of sensor from center of robot - x, y, yaw
 
 <p align="center">
-	<img src="media/param.png" width="488" height="252"/>
+	<img src="media/param.png" width="610" height="315"/>
 </p>
 
 **Topics:**<br>
 - /optical_driver_1/usb_driver
 - /optical_driver_2/usb_driver
-- Odom
+- /odom
 
 **Services:**<br>
 - Reset initial pose
@@ -48,7 +48,7 @@ Performance highly depends on the surface of the ground. Rough terrains, high re
 - Odom => base_link
 
 <p align="center">
-	<img src="media/tsf.png" width="486" height="192"/>
+	<img src="media/tsf.png" width="607" height="240"/>
 </p>
 
 > ⚠️ **Note:** The initial position fo the robot is consider to be that from when the launch file is launched.
