@@ -45,7 +45,7 @@ Performance highly depends on the surface of the ground. Rough terrains, high re
 - Reset initial pose
 
 **Frames:**<br>
-- Odom => base_link
+- odom => base_link
 
 <p align="center">
 	<img src="media/tsf.png" width="607" height="240"/>
@@ -59,9 +59,11 @@ The descriptor script displays the device description of all the connected USB d
 
 ### usb_driver.py
 
-`usb_driver` ros node listens on the the USB port for the specific device it has been launched for. The node publishes dx and dy registered by the individual sensor at a rate of `50 Hz`. Since the sensor works on interrupt transfer mode if the robot is not moving, no data is transferred by the sensor. Timeout methods ensures the node ends the listening process after every `10ms`. And so this inactivity is logged with a throttle period of `1sec`. In case of sensor disconnection the node logs this information and terminates it execution.
+`usb_driver` ros node listens on the the USB port for the specific device it has been launched for. The node publishes dx and dy registered by the individual sensor at a rate of `50 Hz`. Since the sensor works on interrupt transfer mode if the robot is not moving, no data is transferred by the sensor. Timeout methods ensures the node ends the listening process after every `20ms`. And so this inactivity is logged with a throttle period of `1sec`. In case of sensor disconnection the node logs this information and terminates it execution.
 
 ### interface.py
+
+Where should the robot pose be updated? In master_callback or subscription_callback => should be subscription_callback because data received is dx and dy, and publishment in master_callback 
 
 ### optical_odometry.launch.py
 
@@ -69,9 +71,13 @@ The launch file launches 2 instances of usb_driver with device description as pa
 
 ## How to Install Mouse on Robot
 
+<p align="center">
+	<img src="media/mathmodels.png" width="750" height="500"/>
+</p>
+
 ## Tested on
 
-RaspberryPi 4B running Ubuntu 22.04 using HP - MOFYUO 
+RaspberryPi 4B running Ubuntu 22.04, ROS2 Humble using HP - MOFYUO 
 
 ## Usage
 

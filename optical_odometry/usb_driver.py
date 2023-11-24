@@ -61,7 +61,7 @@ class USB(Node):
     def master_callback(self):
 
         try:
-            data = self.device.read(self.eaddr, self.buffer_size, timeout = 10) # type: ignore
+            data = self.device.read(self.eaddr, self.buffer_size, timeout = 20) # type: ignore
 
             dx = data[1]
             dy = data[2]
@@ -74,8 +74,10 @@ class USB(Node):
 
             # self.get_logger().info(f"x: {self.mm_x:.3f}, y: {self.mm_y:.3f}")
         except usb.core.USBTimeoutError as e:
-        #    self.get_logger().info(f"x: {self.mm_x:.3f}, y: {self.mm_y:.3f}")
-           self.get_logger().info("Robot not moving ... :)", throttle_duration_sec=1)
+            # self.get_logger().info(f"x: {self.mm_x:.3f}, y: {self.mm_y:.3f}")
+            self.mm_x = 0.0
+            self.mm_y = 0.0
+            self.get_logger().info("Robot not moving ... :)", throttle_duration_sec=1)
         except usb.core.USBError as e:
             self.get_logger().error("Device disconnected ...")
             exit()
