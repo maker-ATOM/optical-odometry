@@ -74,9 +74,41 @@ The launch file launches 2 instances of usb_driver with device description as pa
 
 ## How to Install Mouse on Robot
 
+> **Note:** Naming Convention: RGB => x, y, z 
+> Positive direction for rotation follows right hand thumb.
+
 <p align="center">
 	<img src="media/mathmodels.png" width="750" height="500"/>
 </p>
+
+<p align="center">
+	<img src="media/gen_mathmodels.png" width="750"/>
+</p>
+
+$$
+(R_x)_{M1} : Translation \space in \space x-direction \space of \space Robot \space interpreted \space by \space Sensor \space M_1 
+\newline
+(R_y)_{M1} : Translation \space in \space y-direction \space of \space Robot \space interpreted \space by \space Sensor \space M_1
+\newline
+(R_ψ)_{M1} : Rotation \space about \space z-axis \space of \space Robot \space interpreted \space by \space Sensor \space M_1
+$$
+
+$$
+θ, (M_1)_θ : Orientational \space offset \space of \space sensor \space wrt \space Robot
+\newline
+(M_1)_px : Positional \space offset \space of \space sensor \space wrt \space Robot \space in \space x-direction
+\newline
+(M_1)_py : Positional \space offset \space of \space sensor \space wrt \space Robot \space in \space y-direction
+\newline
+$$
+
+$$
+R_x : Translation \space in \space x-direction \space of \space Robot
+\newline
+R_y : Translation \space in \space y-direction \space of \space Robot
+\newline
+R_ψ : Rotation \space about \space z-axis \space of \space Robot
+$$
 
 ## Tested on
 
