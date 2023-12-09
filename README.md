@@ -86,30 +86,27 @@ The launch file launches 2 instances of usb_driver with device description as pa
 	<img src="media/gen_mathmodels.png" width="750"/>
 </p>
 
-$$
-(R_x)_{M1} : Translation \space in \space x-direction \space of \space Robot \space interpreted \space by \space Sensor \space M_1 
-\newline
-(R_y)_{M1} : Translation \space in \space y-direction \space of \space Robot \space interpreted \space by \space Sensor \space M_1
-\newline
-(R_ψ)_{M1} : Rotation \space about \space z-axis \space of \space Robot \space interpreted \space by \space Sensor \space M_1
-$$
+<p align="center">
+(R<sub>x</sub>)<sub>M1</sub>: Translation in x-direction of Robot interpreted by Sensor M<sub>1</sub>
+<br>
+(R<sub>y</sub>)<sub>M1</sub> : Translation in y-direction of Robot interpreted by Sensor M<sub>1</sub>
+<br>
+(R<sub>ψ</sub>)<sub>M1</sub> : Rotation about z-axis of Robot interpreted by Sensor M<sub>1</sub>
 
-$$
-θ, (M_1)_θ : Orientational \space offset \space of \space sensor sensor \space M_1 \space wrt \space Robot
-\newline
-(M_1)_{px} : Positional \space offset \space of \space sensor sensor \space M_1 \space wrt \space Robot \space in \space x-direction
-\newline
-(M_1)_{py} : Positional \space offset \space of \space sensor \space M_1 \space wrt \space Robot \space in \space y-direction
-\newline
-$$
 
-$$
-R_x : Translation \space in \space x-direction \space of \space Robot
-\newline
-R_y : Translation \space in \space y-direction \space of \space Robot
-\newline
-R_ψ : Rotation \space about \space z-axis \space of \space Robot
-$$
+θ, (M<sub>1</sub>)<sub>θ</sub> : Orientational offset of sensor M<sub>1</sub> wrt Robot
+<br>
+(M<sub>1</sub>)<sub>px</sub> : Positional offset of sensor M<sub>1</sub> wrt Robot in x-direction
+<br>
+(M<sub>1</sub>)<sub>py</sub> : Positional offset of sensor M<sub>1</sub> wrt Robot in y-direction
+
+
+R<sub>x</sub> : Translation  in  x-direction  of  Robot
+<br>
+R<sub>y</sub> : Translation  in  y-direction  of  Robot
+<br>
+R<sub>ψ</sub> : Rotation  about  z-axis  of  Robot
+</p>
 
 <p align="center">
 	Special Case
