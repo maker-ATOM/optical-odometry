@@ -4,7 +4,10 @@ Alternative method to generate odometry data for **indoor** robots using optical
 
 Devices that can be used as optical flow sensors
 - [ ] USB mouse - requires USB driver
-- [ ] Optical Flow sensor module, e.g MATEKSYS 3901-L0X, Avago ADNS-9500 - requires low level communication driver as well as has some minimum height issues.
+- [ ] Optical Flow sensor module, e.g ~~MATEKSYS 3901-L0X, Avago ADNS-9500~~ - requires low level communication driver as well as has some minimum height issues.
+  - [PWM3901](https://holybro.com/products/pmw3901-optical-flow-sensor)
+  - [PAA5100JE](https://shop.pimoroni.com/products/paa5100je-optical-tracking-spi-breakout?variant=39315330170963)
+  - [Libs for above sensor](https://github.com/pimoroni/pmw3901-python)
 - [ ] General Purpose Camera, e.g RaspberryPi camera - requires to design a custom cross-corelation algorithm.
 
 > Testing on USB MOUSE, referred to as sensor.
@@ -243,5 +246,5 @@ Execute descriptor and then usb_driver for the address to be reflected
 ```py
 lsusb
 lsusb -t
-lsusb -D /dev/bus/sub/<bus>/<address>
+lsusb -v -s <bus>:<device>
 ```
