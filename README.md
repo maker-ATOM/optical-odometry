@@ -92,15 +92,15 @@ The launch file launches 2 instances of usb_driver with device description as pa
 (R<sub>y</sub>)<sub>M1</sub> : Translation in y-direction of Robot interpreted by Sensor M<sub>1</sub>
 <br>
 (R<sub>ψ</sub>)<sub>M1</sub> : Rotation about z-axis of Robot interpreted by Sensor M<sub>1</sub>
-
-
+<br>
+<br>
 θ, (M<sub>1</sub>)<sub>θ</sub> : Orientational offset of sensor M<sub>1</sub> wrt Robot
 <br>
 (M<sub>1</sub>)<sub>px</sub> : Positional offset of sensor M<sub>1</sub> wrt Robot in x-direction
 <br>
 (M<sub>1</sub>)<sub>py</sub> : Positional offset of sensor M<sub>1</sub> wrt Robot in y-direction
-
-
+<br>
+<br>
 R<sub>x</sub> : Translation  in  x-direction  of  Robot
 <br>
 R<sub>y</sub> : Translation  in  y-direction  of  Robot
@@ -108,9 +108,9 @@ R<sub>y</sub> : Translation  in  y-direction  of  Robot
 R<sub>ψ</sub> : Rotation  about  z-axis  of  Robot
 </p>
 
-<p align="center">
+<h5 align="center">
 	Special Case
-</p>
+</h5>
 
 <p align="center">
 	<img src="media/mathmodels.png" width="750" height="500"/>
