@@ -75,10 +75,11 @@ The launch file launches 2 instances of usb_driver with device description as pa
 ## How to Install Mouse on Robot
 
 > **Note:** Naming Convention: RGB => x, y, z 
+
 > Positive direction for rotation follows right hand thumb.
 
 <p align="center">
-	<img src="media/mathmodels.png" width="750" height="500"/>
+	General Math Model
 </p>
 
 <p align="center">
@@ -94,11 +95,11 @@ $$
 $$
 
 $$
-θ, (M_1)_θ : Orientational \space offset \space of \space sensor \space wrt \space Robot
+θ, (M_1)_θ : Orientational \space offset \space of \space sensor sensor \space M_1 \space wrt \space Robot
 \newline
-(M_1)_px : Positional \space offset \space of \space sensor \space wrt \space Robot \space in \space x-direction
+(M_1)_{px} : Positional \space offset \space of \space sensor sensor \space M_1 \space wrt \space Robot \space in \space x-direction
 \newline
-(M_1)_py : Positional \space offset \space of \space sensor \space wrt \space Robot \space in \space y-direction
+(M_1)_{py} : Positional \space offset \space of \space sensor \space M_1 \space wrt \space Robot \space in \space y-direction
 \newline
 $$
 
@@ -109,6 +110,14 @@ R_y : Translation \space in \space y-direction \space of \space Robot
 \newline
 R_ψ : Rotation \space about \space z-axis \space of \space Robot
 $$
+
+<p align="center">
+	Special Case
+</p>
+
+<p align="center">
+	<img src="media/mathmodels.png" width="750" height="500"/>
+</p>
 
 ## Tested on
 
