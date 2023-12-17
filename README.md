@@ -173,7 +173,6 @@ optical_driver_1 =  Node(
             {'Dpi': 800},
         ],
     )
-# Node definition where device description needs to be updated.
 ```
 
 Launch nodes,
