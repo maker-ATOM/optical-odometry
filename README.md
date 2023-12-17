@@ -2,6 +2,8 @@
 
 Alternative method to generate odometry data for **indoor** robots using optical flow sensor.
 
+> **Note**: This branch tests the ideology by utilizing RGB camera and performing cross corelation algorithm in gazebo simulation environment.
+
 Devices that can be used as optical flow sensors
 - [ ] USB mouse - requires USB driver
 - [ ] Optical Flow sensor module, e.g ~~MATEKSYS 3901-L0X, Avago ADNS-9500~~ - requires low level communication driver as well as has some minimum height issues.
@@ -10,32 +12,29 @@ Devices that can be used as optical flow sensors
   - [Libs for above sensor](https://github.com/pimoroni/pmw3901-python)
 - [ ] General Purpose Camera, e.g RaspberryPi camera - requires to design a custom cross-corelation algorithm.
 
-**This branch tests the ideology of utilizing RGB camera and performing cross corelation algorithm in gazebo simulation environment**
-
 
 
 **Challenges:**<br><br>
 Performance highly depends on the surface of the ground. Rough terrains, high reflective surfaces are not suitable.
 
 **Node Structure:**
-- Low level driver: Communicates with hardware : publishes data on individual sensor topic - x2  for each mice, descriptor will store data of all devices, driver should choose which to use 	
+- Low level driver: Communicates with hardware : publishes data on individual sensor topic - x2  for each sensor
 - High level driver: which publishes data on topic odom by subscribing to individual sensor topics and performing the mathematical operations.
 
 <p align="center">
-	<img src="media/node_struct.png" width="596" height="353"/>
+	<img src="media/node_struct.png" width="600"/>
 </p>
 
 **Parameters:**<br>
-- Device description - Vendor Id, Product ID, Bus No. USB Address, DPI
 - Position of sensor from center of robot - x, y, yaw
 
 <p align="center">
-	<img src="media/param.png" width="610" height="315"/>
+	<img src="media/param.png" width="600"/>
 </p>
 
 **Topics:**<br>
-- /optical_driver_1/usb_driver
-- /optical_driver_2/usb_driver
+- /optical_flow_sensor_a
+- /optical_flow_sensor_b
 - /odom
 
 **Services:**<br>
@@ -45,7 +44,7 @@ Performance highly depends on the surface of the ground. Rough terrains, high re
 - odom => base_link
 
 <p align="center">
-	<img src="media/tsf.png" width="607" height="240"/>
+	<img src="media/tsf.png" width="600"/>
 </p>
 
 > ⚠️ **Note:** The initial position fo the robot is consider to be that from when the launch file is launched.
@@ -91,7 +90,7 @@ R<sub>ψ</sub> : Rotation  about  z-axis  of  Robot
 </h4>
 
 <p align="center">
-	<img src="media/mathmodels.png" width="750" height="500"/>
+	<img src="media/mathmodels.png" width="750"/>
 </p>
 
 ## Tested On
