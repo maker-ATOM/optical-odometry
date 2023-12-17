@@ -78,9 +78,9 @@ The launch file launches 2 instances of usb_driver with device description as pa
 
 > Positive direction for rotation follows right hand thumb.
 
-<p align="center">
+<h4 align="center">
 	General Math Model
-</p>
+</h4>
 
 <p align="center">
 	<img src="media/gen_mathmodels.png" width="750"/>
@@ -108,9 +108,9 @@ R<sub>y</sub> : Translation  in  y-direction  of  Robot
 R<sub>ψ</sub> : Rotation  about  z-axis  of  Robot
 </p>
 
-<h5 align="center">
+<h4 align="center">
 	Special Case
-</h5>
+</h4>
 
 <p align="center">
 	<img src="media/mathmodels.png" width="750" height="500"/>
