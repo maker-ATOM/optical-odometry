@@ -181,7 +181,7 @@ Launch nodes,
 ```py
 ros2 launch optical_odometry optical_odometry.launch.py 
 ```
-> Every time the launch file is updated build the package
+> Every time the launch file is updated build the package 
 
 Robot's odometry should be published on the topic /odom
 
